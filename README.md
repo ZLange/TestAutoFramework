@@ -1,2 +1,4 @@
 # TestAutoFramework
-test framework for letscodeit
+
+Createing automation framework for letscodeit page. 
+As practical example within the course https://www.udemy.com/course/selenium-webdriver-with-python3/
