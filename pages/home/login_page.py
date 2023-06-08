@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 from base.selenium_driver import SeleniumDriver
 # import time
@@ -39,9 +41,27 @@ class LoginPage(SeleniumDriver):
     def clickLoginButton(self):
         self.elementClick(self._login_button)
 
-    def login(self, username, password):  # functionality, what needs to be done
+    def login(self, username="", password=""):  # functionality, what needs to be done
         self.clickLoginLink()
+        self.clearFields()
         self.enterUsername(username)
         self.enterPassword(password)
+        time.sleep(3)
         self.clickLoginButton()
 
+    def verifyLoginSuccess(self):
+        result = self.isElementPresent("//img[@class='zl-navbar-rhs-img ']", locatorType='xpath')
+
+        return result
+
+    def verifyLoginFailed(self):
+        result = self.isElementPresent("//span[contains(text(),'Your username or password is invalid. Please try again.')]",
+                                       locatorType='xpath')
+
+        return result
+
+    def clearFields(self):
+        emailField = self.getElement(locator=self._email_field)
+        emailField.clear()
+        passwordField = self.getElement(locator=self._password_field)
+        passwordField.clear()

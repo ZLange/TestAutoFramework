@@ -1,0 +1,24 @@
+06/08/2023 10:30:43 PM - SeleniumDriver - INFO: Element found with locator: //a[normalize-space()='Sign In'] and  locatorType: xpath
+06/08/2023 10:30:44 PM - SeleniumDriver - INFO: Clicked on element with locator: //a[normalize-space()='Sign In'] locatorType: xpath
+06/08/2023 10:30:44 PM - SeleniumDriver - INFO: Element found with locator: email and  locatorType: id
+06/08/2023 10:30:44 PM - SeleniumDriver - INFO: Element found with locator: login-password and  locatorType: id
+06/08/2023 10:30:44 PM - SeleniumDriver - INFO: Element found with locator: email and  locatorType: id
+06/08/2023 10:30:44 PM - SeleniumDriver - INFO: Sent data on element with locator: email locatorType: id
+06/08/2023 10:30:44 PM - SeleniumDriver - INFO: Element found with locator: login-password and  locatorType: id
+06/08/2023 10:30:44 PM - SeleniumDriver - INFO: Sent data on element with locator: login-password locatorType: id
+06/08/2023 10:30:47 PM - SeleniumDriver - INFO: Element found with locator: login and  locatorType: id
+06/08/2023 10:30:47 PM - SeleniumDriver - INFO: Clicked on element with locator: login locatorType: id
+06/08/2023 10:30:50 PM - SeleniumDriver - INFO: Element found with locator: //span[contains(text(),'Your username or password is invalid. Please try again.')] and  locatorType: xpath
+06/08/2023 10:30:50 PM - SeleniumDriver - INFO: Element Found
+06/08/2023 10:30:50 PM - SeleniumDriver - INFO: Element found with locator: //a[normalize-space()='Sign In'] and  locatorType: xpath
+06/08/2023 10:30:51 PM - SeleniumDriver - INFO: Clicked on element with locator: //a[normalize-space()='Sign In'] locatorType: xpath
+06/08/2023 10:30:51 PM - SeleniumDriver - INFO: Element found with locator: email and  locatorType: id
+06/08/2023 10:30:51 PM - SeleniumDriver - INFO: Element found with locator: login-password and  locatorType: id
+06/08/2023 10:30:51 PM - SeleniumDriver - INFO: Element found with locator: email and  locatorType: id
+06/08/2023 10:30:51 PM - SeleniumDriver - INFO: Sent data on element with locator: email locatorType: id
+06/08/2023 10:30:51 PM - SeleniumDriver - INFO: Element found with locator: login-password and  locatorType: id
+06/08/2023 10:30:51 PM - SeleniumDriver - INFO: Sent data on element with locator: login-password locatorType: id
+06/08/2023 10:30:54 PM - SeleniumDriver - INFO: Element found with locator: login and  locatorType: id
+06/08/2023 10:30:54 PM - SeleniumDriver - INFO: Clicked on element with locator: login locatorType: id
+06/08/2023 10:30:56 PM - SeleniumDriver - INFO: Element found with locator: //img[@class='zl-navbar-rhs-img '] and  locatorType: xpath
+06/08/2023 10:30:56 PM - SeleniumDriver - INFO: Element Found
