@@ -55,10 +55,16 @@ class LoginPage(SeleniumDriver):
         return result
 
     def verifyLoginFailed(self):
-        result = self.isElementPresent("//span[contains(text(),'Your username or password is invalid. Please try again.')]",
+        result = self.isElementPresent("//span[contains(text(),'Incorrect login details. Please try again.')]",
                                        locatorType='xpath')
 
         return result
+
+    def verifyTitle(self):
+        if "Login" in self.getTitle():   # L
+            return True
+        else:
+            return False
 
     def clearFields(self):
         emailField = self.getElement(locator=self._email_field)
