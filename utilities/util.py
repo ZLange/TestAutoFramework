@@ -5,11 +5,14 @@ All most commonly used utilities should be implemented in this class
 Example:
     name = self.util.getUniqueName()
 """
+import logging
+import random
+import string
 import time
 import traceback
-import random, string
+
 import utilities.custom_logger as cl
-import logging
+
 
 class Util(object):
 
