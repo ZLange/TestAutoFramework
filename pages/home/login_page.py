@@ -1,9 +1,13 @@
 import time
 
-from selenium.webdriver.common.by import By
-from base.selenium_driver import SeleniumDriver
+#from selenium.webdriver.common.by import By
+# from base.selenium_driver import SeleniumDriver
+import utilities.custom_logger as cl
+import logging
+from base.base_page import BasePage
 # import time
-class LoginPage(SeleniumDriver):
+class LoginPage(BasePage):
+    log = cl.customLogger(logging.DEBUG)
 
     def __init__(self, driver):
         super().__init__(driver)  # added driver instance, won't run without it !!!!!
@@ -61,7 +65,7 @@ class LoginPage(SeleniumDriver):
         return result
 
     def verifyTitle(self):
-        if "Login" in self.getTitle():   # L
+        if "Login121" in self.getTitle():   # Login correct
             return True
         else:
             return False
