@@ -1,11 +1,8 @@
 import time
 
-#from selenium.webdriver.common.by import By
-# from base.selenium_driver import SeleniumDriver
 import utilities.custom_logger as cl
 import logging
 from base.base_page import BasePage
-# import time
 class LoginPage(BasePage):
     log = cl.customLogger(logging.DEBUG)
 
