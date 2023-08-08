@@ -5,7 +5,7 @@ import logging
 from base.base_page import BasePage
 
 
-class RgisterForCourses(BasePage):
+class RegisterForCourses(BasePage):
 
     log = cl.customLogger(logging.DEBUG)
 
@@ -14,24 +14,72 @@ class RgisterForCourses(BasePage):
         self.driver = driver
 
     # locators
-    _search_box = "//input[@id='search']"
-    _click_search = "//i[@class='fa fa-search']"
-    _course = "//a[@href='/courses/javascript-for-beginners']"
     _all_courses = "//a[normalize-space()='ALL COURSES']"
+    #_all_courses = "course-listing-title"
+    _search_box = "search"
+    _search_course_icon = "//i[@class='fa fa-search']"
+    _course = "//a[@href='/courses/javascript-for-beginners']"
     _enroll_button = "//button[@class='dynamic-button btn btn-default btn-lg btn-enroll']"
-    _cc_num = "//input[@placeholder='Card Number']"
-    _cc_exp = "//input[@placeholder='MM / YY']"
-    _cc_cvv = "//input[@placeholder='Security Code']"
-    _submit_enroll = "//button[@class='zen-subscribe sp-buy btn btn-default btn-lg btn-block btn-gtw btn-submit checkout-button dynamic-button']" # need to do better
-    _enroll_error_msg = "//div[@role='alert']//p[@class='dynamic-text']"
+    _card_num = "//input[@placeholder='Card Number']"
+    _card_exp = "//input[@placeholder='MM / YY']"
+    _card_cvv = "//input[@placeholder='Security Code']"
+    _agree_to_terms_checkbox = "agreed_to_terms_checkbox"
+    _submit_enroll = "//button[@id='confirm-purchase']/parent::div"
 
-    def allCourses(self, coursesAll):
-        self.elementClick(coursesAll, self._all_courses)
+    # after login go to all courses
+    def allCourses(self):
+        self.getElement(locator=self._all_courses, locatorType='xpath' )
+        self.elementClick(locator=self._all_courses)
 
     def enterCourseName(self, courseName):
-        self.sendKeys(courseName, self._search_box)
+        self.sendKeys(courseName, locator=self._search_box, locatorType='id')
+        self.elementClick(locator=self._search_course_icon)
 
-    def selectCourse(self, selectCourse):
-        self.elementClick(selectCourse, self._course)
+    def selectCourseToEnroll(self):
+        self.elementClick(locator=self._course)
 
-    def
+    def clickOnEnrollButton(self):
+        self.elementClick(locator=self._enroll_button)
+
+    def enterCardNum(self, cardNum):
+        # self.switchToFrame(name="__privateStripeFrame4")
+        self.sendKeys(cardNum, locator=self._card_num, locatorType="xpath")
+        self.switchToDefaultContent()
+
+    def enterCardExp(self, cardExp):
+        # self.switchToFrame(name="__privateStripeFrame5")
+        self.sendKeys(cardExp, locator=self._card_exp, locatorType="name")
+        self.switchToDefaultContent()
+
+    def enterCardCVV(self, cardcvv):
+        # self.switchToFrame(name="__privateStripeFrame6")
+        self.sendKeys(cardcvv, locator=self._card_cvv, locatorType="name")
+        self.switchToDefaultContent()
+
+    def enterZip(self):
+        # self.switchToFrame(name="__privateStripeFrame7")
+        self.sendKeys(zip, locatorType="name")
+        self.switchToDefaultContent()
+
+    def clickAgreeToTermsCheckbox(self):
+        self.elementClick(locator=self._agree_to_terms_checkbox)
+
+    def clickEnrollSubmitButton(self):
+        self.elementClick(locator=self._submit_enroll, locatorType="xpath")
+
+    def enterCreditCardInformation(self, num, exp, cvv):
+        self.enterCardNum(num)
+        self.enterCardExp(exp)
+        self.enterCardCVV(cvv)
+
+    def enrollCourse(self, num="", exp="", cvv=""):
+        self.clickOnEnrollButton()
+        self.webScroll(direction="down")
+        self.enterCreditCardInformation(num, exp, cvv)
+        self.clickAgreeToTermsCheckbox()
+
+    def verifyEnrollFailed(self):
+        result = self.isEnabled(locator=self._submit_enroll, locatorType="xpath",
+                                info="Enroll Button")
+        return not result
+

@@ -10,8 +10,8 @@ import logging
 from base.selenium_driver import SeleniumDriver
 from traceback import print_stack
 
-class TestStatus(SeleniumDriver):
 
+class TestStatus(SeleniumDriver):
     log = cl.customLogger(logging.INFO)
 
     def __init__(self, driver):
@@ -56,7 +56,7 @@ class TestStatus(SeleniumDriver):
         self.setResult(result, resultMessage)
 
         if "FAIL" in self.resultList:
-            self.log.error(testName +  " ### TEST FAILED")
+            self.log.error(testName + " ### TEST FAILED")
             self.resultList.clear()
             assert True == False
         else:
