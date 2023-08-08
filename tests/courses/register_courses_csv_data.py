@@ -19,7 +19,7 @@ class RegisterForCoursesTests(unittest.TestCase):
         self.driver.find_element_by_link_text("All Courses").click()   # to get all courses
 
     @pytest.mark.run(order=1)
-    @data(*getCSVData("fill with csv file path"))
+    @data(*getCSVData("fill with csv file path"))  # can provide only file name if file is in project folder
     @unpack
     def test_invalidEnrollment(self, cName, cNum, cExp, cCVV):
         # self.courses.allCourses()
