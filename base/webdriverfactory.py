@@ -37,7 +37,13 @@ class WebDriverFactory():
 
         Returns:
             'WebDriver Instance'
+
+
+        new one "https://learn.letskodeit.com/courses"
+         old one "https://www.letskodeit.com/"
         """
+
+
         baseURL = "https://www.letskodeit.com/"
         if self.browser == "iexplorer":
             # Set ie driver
