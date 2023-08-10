@@ -16,7 +16,8 @@ class RegisterForCoursesTests(unittest.TestCase):
 
     @pytest.mark.run(order=1)
     def test_invalidEnrollment(self):
-        self.courses.allCourses()
+        # self.courses.allCourses()
+        self.driver.find_element_by_link_text("ALL COURSES").click()
         self.courses.enterCourseName("JavaScript")
         self.courses.selectCourseToEnroll()
         self.courses.enrollCourse(num="5500 0000 0000 0004", exp="0525", cvv="444")
