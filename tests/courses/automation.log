@@ -1,0 +1,3 @@
+08/22/2023 08:16:16 PM - LoginPage - INFO: Element found with locator: //a[normalize-space()='Login'] and  locatorType: xpath
+08/22/2023 08:16:16 PM - LoginPage - INFO: Clicked on element with locator: //a[normalize-space()='Login'] locatorType: xpath
+08/22/2023 08:16:19 PM - LoginPage - INFO: Element not found with locator: email and  locatorType: id

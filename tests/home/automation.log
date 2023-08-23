@@ -1,0 +1,16 @@
+08/22/2023 08:37:31 PM - LoginPage - INFO: Element found with locator: //a[normalize-space()='Sign In'] and  locatorType: xpath
+08/22/2023 08:37:31 PM - LoginPage - INFO: Clicked on element with locator: //a[normalize-space()='Sign In'] locatorType: xpath
+08/22/2023 08:37:31 PM - LoginPage - INFO: Element found with locator: email and  locatorType: id
+08/22/2023 08:37:32 PM - LoginPage - INFO: Element found with locator: login-password and  locatorType: id
+08/22/2023 08:37:32 PM - LoginPage - INFO: Element found with locator: email and  locatorType: id
+08/22/2023 08:37:32 PM - LoginPage - INFO: Sent data on element with locator: email locatorType: id
+08/22/2023 08:37:32 PM - LoginPage - INFO: Element found with locator: login-password and  locatorType: id
+08/22/2023 08:37:32 PM - LoginPage - INFO: Sent data on element with locator: login-password locatorType: id
+08/22/2023 08:37:37 PM - LoginPage - INFO: Element found with locator: login and  locatorType: id
+08/22/2023 08:37:37 PM - LoginPage - INFO: Clicked on element with locator: login locatorType: id
+08/22/2023 08:37:37 PM - LoginPage - INFO: Element found with locator: //a[normalize-space()='Sign In'] and  locatorType: xpath
+08/22/2023 08:37:39 PM - LoginPage - INFO: Cannot click on the element with locator: //a[normalize-space()='Sign In'] locatorType: xpath
+08/22/2023 08:37:39 PM - LoginPage - INFO: Element found with locator: email and  locatorType: id
+08/22/2023 08:37:45 PM - LoginPage - INFO: Element not found with locator: //a[normalize-space()='Sign In'] and  locatorType: xpath
+08/22/2023 08:37:45 PM - LoginPage - INFO: Cannot click on the element with locator: //a[normalize-space()='Sign In'] locatorType: xpath
+08/22/2023 08:37:45 PM - LoginPage - INFO: Element found with locator: email and  locatorType: id

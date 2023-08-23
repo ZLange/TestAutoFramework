@@ -9,6 +9,10 @@ import time
 @pytest.mark.usefixtures("oneTimeSetUp", "setUp")
 class RegisterForCoursesTests(unittest.TestCase):
 
+    def __init__(self, methodName: str = ...):
+        super().__init__(methodName)
+        self.driver = None
+
     @pytest.fixture(autouse=True)
     def objectSetup(self, oneTimeSetUp):
         self.courses = RegisterForCourses(self.driver)

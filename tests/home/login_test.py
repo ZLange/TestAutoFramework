@@ -17,6 +17,7 @@ class LoginTests(unittest.TestCase):
     @pytest.mark.run(order=2)
     def test_valid_login(self):
         self.lp.login("test@email.com", "abcabc")
+        time.sleep(5)
         result1 = self.lp.verifyTitle()
         self.ts.mark(result1, "Title Verified")
         result2 = self.lp.verifyLoginSuccess()

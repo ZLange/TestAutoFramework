@@ -12,6 +12,7 @@ class LoginPage(BasePage):
 
     # locators
     _login_link = "//a[normalize-space()='Sign In']"
+    # _login_link = "//a[normalize-space()='Login']"
     _email_field = "email"
     _password_field = "login-password"
     _login_button = "login"
@@ -47,7 +48,7 @@ class LoginPage(BasePage):
         self.clearFields()
         self.enterUsername(username)
         self.enterPassword(password)
-        time.sleep(3)
+        time.sleep(5)
         self.clickLoginButton()
 
     def verifyLoginSuccess(self):
